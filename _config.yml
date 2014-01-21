@@ -1,0 +1,34 @@
+# =============================================
+# Build config
+# =============================================
+
+root:             _gh_pages
+dest:             test/actual
+assets:           <%= config.dest %>/assets
+
+# Tests
+
+# Data
+data:             test/fixtures/data/*.{json,yml}
+
+# Templates
+templates:        test/fixtures
+includes:         <%= config.templates %>/includes/*.hbs
+book:             <%= config.templates %>/book
+posts:            <%= config.templates %>/posts
+pages:            <%= config.templates %>/pages
+layouts:          <%= config.templates %>/layouts
+layoutext:        .hbs
+layout:           default
+
+# Extensions
+helpers:          <%= config.templates %>/helpers/*.js
+plugins:
+  - assemble-contrib-anchors
+  - assemble-contrib-permalinks
+  - assemble-contrib-toc
+  - assemble-contrib-wordcount
+
+# Theme
+styles:           styles
+components:       <%= config.styles %>/components
