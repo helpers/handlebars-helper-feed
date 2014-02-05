@@ -1,6 +1,6 @@
 {
   "name": "handlebars-helper-feed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Handlebars helper for generating entries for RSS or atom feeds.",
   "author": {
     "name": "Jon Schlinkert",
@@ -25,8 +25,8 @@
     "globule": "~0.2.0",
     "lodash": "~2.4.0",
     "underscore.string": "~2.3.3",
-    "yfm": "~0.1.0",
-    "moment": "~2.5.0"
+    "moment": "~2.5.0",
+    "gray-matter": "~0.2.6"
   },
   "devDependencies": {
     "time-grunt": "~0.2.8",

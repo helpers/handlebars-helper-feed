@@ -15,7 +15,7 @@ var path   = require('path');
 // node_modules
 var file   = require('fs-utils');
 var glob   = require('globule');
-var yfm    = require('yfm');
+var matter = require('gray-matter');
 var moment = require('moment');
 var _str   = require('underscore.string');
 var _      = require('lodash');
@@ -87,8 +87,8 @@ module.exports.register = function (Handlebars, options, params) {
 
         i += 1;
 
-        var content = yfm(filepath).content || '';
-        var metadata = yfm(filepath).context || {};
+        var content = matter.read(filepath).content || '';
+        var metadata = matter.read(filepath).context || {};
 
         // Format date to RFC-822 datetime for XML feed
         var datetime = metadata.date || moment();
